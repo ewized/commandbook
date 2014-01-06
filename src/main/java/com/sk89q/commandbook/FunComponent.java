@@ -333,7 +333,6 @@ public class FunComponent extends BukkitComponent {
             }
 
             for (Player player : targets) {
-                count++;
 
                 if (args.hasFlag('v')) {
                     player.setVelocity(new Vector(
@@ -369,15 +368,16 @@ public class FunComponent extends BukkitComponent {
 
                     }
                 } else {
-                    if (count < 6) {
+                    if (count < 3) {
                         BasePlugin.server().broadcastMessage(
                                 ChatColor.YELLOW + PlayerUtil.toColoredName(sender, ChatColor.YELLOW)
                                 + " slapped " + PlayerUtil.toColoredName(player, ChatColor.YELLOW));
-                    } else if (count == 6) {
+                    } else if (count == 3) {
                         BasePlugin.server().broadcastMessage(
                                 ChatColor.YELLOW + PlayerUtil.toColoredName(sender, ChatColor.YELLOW)
                                 + " slapped more people...");
                     }
+                    count++;
                 }
             }
 
@@ -430,16 +430,16 @@ public class FunComponent extends BukkitComponent {
 
                     }
                 } else {
-                    ++count;
-                    if (count < 6) {
+                    if (count < 3) {
                         BasePlugin.server().broadcastMessage(
                                 ChatColor.YELLOW + PlayerUtil.toColoredName(sender, ChatColor.YELLOW)
                                 + " rocketed " + PlayerUtil.toColoredName(player, ChatColor.YELLOW));
-                    } else if (count == 6) {
+                    } else if (count == 3) {
                         BasePlugin.server().broadcastMessage(
                                 ChatColor.YELLOW + PlayerUtil.toColoredName(sender, ChatColor.YELLOW)
                                 + " rocketed more people...");
                     }
+                    count++;
                 }
             }
 
@@ -494,15 +494,16 @@ public class FunComponent extends BukkitComponent {
 
                     }
                 } else {
-                    if (count < 6) {
+                    if (count < 3) {
                         BasePlugin.server().broadcastMessage(
                                 ChatColor.YELLOW + PlayerUtil.toColoredName(sender, ChatColor.YELLOW)
                                 + " used BARRAGE on " + PlayerUtil.toColoredName(player, ChatColor.YELLOW));
-                    } else if (count == 6) {
+                    } else if (count == 3) {
                         BasePlugin.server().broadcastMessage(
                                 ChatColor.YELLOW + PlayerUtil.toColoredName(sender, ChatColor.YELLOW)
                                 + " used it on more people...");
                     }
+                    count++;
                 }
             }
 
@@ -556,15 +557,16 @@ public class FunComponent extends BukkitComponent {
 
                     }
                 } else {
-                    if (count < 6) {
+                    if (count < 3) {
                         BasePlugin.server().broadcastMessage(
                                 ChatColor.YELLOW + PlayerUtil.toColoredName(sender, ChatColor.YELLOW)
                                 + " used Fireball attack on " + PlayerUtil.toColoredName(player, ChatColor.YELLOW));
-                    } else if (count == 6) {
+                    } else if (count == 3) {
                         BasePlugin.server().broadcastMessage(
                                 ChatColor.YELLOW + PlayerUtil.toColoredName(sender, ChatColor.YELLOW)
                                 + " used it on more people...");
                     }
+                    count++;
                 }
             }
 
@@ -620,15 +622,16 @@ public class FunComponent extends BukkitComponent {
 
                     }
                 } else {
-                    if (count < 6) {
+                    if (count < 3) {
                         BasePlugin.server().broadcastMessage(
                                 ChatColor.YELLOW + PlayerUtil.toColoredName(sender, ChatColor.YELLOW)
                                 + " used Fireball attack on " + PlayerUtil.toColoredName(player, ChatColor.YELLOW));
-                    } else if (count == 6) {
+                    } else if (count == 3) {
                         BasePlugin.server().broadcastMessage(
                                 ChatColor.YELLOW + PlayerUtil.toColoredName(sender, ChatColor.YELLOW)
                                 + " used it more people...");
                     }
+                    count++;
                 }
             }
 
