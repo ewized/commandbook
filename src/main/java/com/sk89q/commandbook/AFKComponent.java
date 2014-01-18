@@ -146,7 +146,7 @@ public class AFKComponent extends BukkitComponent implements Runnable, Listener 
     public boolean canIgnoreSleep(Player player) {
 
         AFKSession session = sessions.getSession(AFKSession.class, player);
-        return canIgnoreSleep(session.isRequested()) || (isAfk(session.getLastUpdate()) && canIgnoreSleep(false));
+        return (session.isRequested() && canIgnoreSleep(true)) || (isAfk(session.getLastUpdate()) && canIgnoreSleep(false));
     }
 
     /**
@@ -169,7 +169,7 @@ public class AFKComponent extends BukkitComponent implements Runnable, Listener 
     public boolean canProtect(Player player) {
 
         AFKSession session = sessions.getSession(AFKSession.class, player);
-        return canProtect(session.isRequested()) || (isAfk(session.getLastUpdate()) && canProtect(false));
+        return (session.isRequested() && canProtect(true)) || (isAfk(session.getLastUpdate()) && canProtect(false));
     }
 
     /**
